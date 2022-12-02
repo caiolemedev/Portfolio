@@ -1,0 +1,35 @@
+:root {
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--body-bg-color);
+  display: flex;
+  padding: 40px;
+  gap: 60px;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+aside div {
+  background-color: var(--bg-cards);
+  padding: 30px;
+}
+
+#perfil {
+}
