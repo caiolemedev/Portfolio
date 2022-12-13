@@ -129,4 +129,14 @@ main header a {
 }
 
 .projectCard {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.projectCard h3 {
+  display: inline;
+  padding: 0;
+  text-align: center;
 }
