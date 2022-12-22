@@ -58,6 +58,7 @@ main header,
 }
 
 #perfil p {
+  padding: 0;
   font-weight: 300;
   font-size: 0.75rem;
 }
@@ -140,13 +141,13 @@ main header a {
 
 .projectCard {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   gap: 10px;
 }
 
 .projectCard h3 {
-  display: inline;
+  width: 90%;
   padding: 0;
   padding-top: 6px;
 }
