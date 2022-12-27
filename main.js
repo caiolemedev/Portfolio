@@ -3,6 +3,9 @@ const userName = perfil.querySelector('h1')
 const userPhoto = perfil.querySelector('img')
 const projects = document.getElementsByClassName('projectCard')
 
+const user = 'caiolemedev'
+const selectedRepos = [2, 3]
+
 class Project {
   constructor(id) {
     this.name = projects[id].querySelector('h3')
@@ -10,11 +13,6 @@ class Project {
     this.description = projects[id].querySelector('p')
   }
 }
-
-const project = new Project(0)
-console.log(project)
-
-const user = 'caiolemedev'
 
 function updatePortfolio() {
   console.log('rodando o JS')
@@ -31,7 +29,11 @@ function updatePortfolio() {
         .get(data.repos_url)
         .then(res => {
           const repos = res.data
-          setProjectInfo(repos[1], project)
+          for (let id = 0; id < 2; id++) {
+            const project = new Project(id)
+            console.log(project)
+            setProjectInfo(repos[selectedRepos[id]], project)
+          }
         })
         .catch(error => {
           console.log(error)
@@ -47,7 +49,6 @@ function setUserInfo(data) {
   userPhoto.src = `${data.avatar_url}`
 }
 
-//change this fuction to receive any project
 function setProjectInfo(repo, project) {
   console.log(repo)
   project.name.textContent = `${repo.name}`
