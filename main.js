@@ -4,7 +4,7 @@ const userPhoto = perfil.querySelector('img')
 const projects = document.getElementsByClassName('projectCard')
 
 const user = 'caiolemedev'
-const selectedRepos = [2, 3]
+const selectedRepos = [7, 8, 5, 6, 3]
 
 class Project {
   constructor(id) {
@@ -29,7 +29,7 @@ function updatePortfolio() {
         .get(data.repos_url)
         .then(res => {
           const repos = res.data
-          for (let id = 0; id < 2; id++) {
+          for (let id = 0; id < 5; id++) {
             const project = new Project(id)
             console.log(project)
             setProjectInfo(repos[selectedRepos[id]], project)
